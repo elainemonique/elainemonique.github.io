@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title> formulário </title>
+</head>
+<body>
+   <h1> Meu primeiro formulário </h1>
+
+    <form action= "https://httpbin.org/get" method="GET">
+     <p><label for="iNome">Nome:</label>
+           <input type="text" name="Nome" placeholder="Digite seu nome"  id="iNome"></p>
+      <p><label for="iSobrenome">Sobrenome:</label>
+           <input type="text" name="Sobrenome" placeholder= "Digite seu sobrenome" id="iSobrenome"></p>
+      <p><label for="iemail">Email:</label>
+           <input type="email" name="email" placeholder="Email@gmail.com"  id="iemail"></p>
+      <p><label for="iassunto">Asunto:</label>  
+           <input type="text" name="assunto" placeholder=" Ex:escola.." id="iassunto"></p>
+      <p><label for="imensagem">Mensagem:</label>
+         <textarea name="mensagem" id="imensagem" rowns="5" cols="50"
+  maxlength="500" placeholder="Escreva sua mensagem..."> </textarea>
+     
+
+      <p><button type="submit">Enviar mensagem</button>
+</form>
+</body>
