@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de usuário</title>
+</head>
+<body>
+   <h1>Cadastro de Usuário</h1>
+     <form action= "https://httpbin.org/post" method="POST">
+   <p><label for="inome"> Nome completo:</label>
+   <input type="text" name="nome" id="inome" required minlength="3" placeholder="Digite seu nome completo."></p>
+
+<p><label for="iemail">Endereço de Email:</label>
+   <input type="email" name="email" id="iemail" required placeholder="Digite seu Email."></p>
+
+<p><label for="isenha">Senha:</label>
+  <input type="password" name="senha" id="isenha" required minlength="8" placeholder="Digite sua Senha."></p>
+
+
+<p><label for="idata">Data de nascimento:</label>
+  <input type="date" name="data" id="idata" min="1970-01-01"
+max="2006-12-31" required></p>
+
+<fieldset>
+  <legend>Gênero:</legend>
+  <label>
+    <input type="radio" name="genero" value="Masculino" /> Masculino.
+  </label>
+  <label>
+    <input type="radio" name="genero" value="Feminino" /> Feminino.
+  </label>
+  <label>
+    <input type="radio" name="genero" value="outro.." /> outro..
+  </label>
+  <label>
+    <input type="radio" name="genero" value="prefiro não informar" /> Prefiro não informar 
+  </label>
+</fieldset>
+
+<fieldset>
+  <legend>Aceite os termos de uso:</legend>
+  <label>
+    <input type="checkbox" name="aceite" value="sim" required /> Aceito os termos de uso 
+  </label>
+</fieldset>
+  <p><button type="submit">Criar conta</button></p>
+  <p><button type="reset">Limpar</button></p>
+</body>
