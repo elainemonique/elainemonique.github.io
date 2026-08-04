@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title> formulário </title>
+</head>
+<body>    
+  <h1>Formulário</h1>
+  <h2>Reserva de mesa Online</h2>
+ <form>
+<label for="inome"> Nome completo</label>
+<input type= "text" name = "Nome" id= "inome" placeholder="Digite seu nome
+ completo"
+<p><label for="telefone">Telefone</label>
+<input type="telefone" name="telefone" id="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+placeholder="(82) 99999-9999">
+  <p><label for="iemail"> Endereço de email</label></p>
+<input type="email" name="email" id="iemail" placeholder="seu@email.com" width="200" height="200">
+<p><label for= "idata">Data da Reserva</label>
+<input type = "date" name="data" id="idata" min="1970-01-01"
+max="2010-12-31">
+<form>
+  <label for="ihora">Horas</label>
+<input type ="time" name="hora" id="ihora" min="10:00" max="22:00"required>
+</form>
+<fieldset>
+<legend>Área de preferência</legend>
+<input type="radio" name="Salão" value="Salão Interno">Salão Interno
+<input type="radio" name="Varanda" value="Varanda">Varanda
+<input type="radio" name="Área" value="Área">Área externa (vista mar)
+</fieldset>
+<p><label for="tipo"> Tipo de ocasião</label>
+<select id="tipo" name="tipo" > <option value=" "> Selecione (opcional) </opition>
+<option value="cs">Casamento</option>
+<option value="an">Aniversário</option>
+<option value="ot">Outro...</option>
+</select>
+<fieldset>
+<legend>Restrições alimentares</legend>
+<label>
+<input type="checkbox" name="Vegetariano" value="sim"> Vegetariano </label>
+<label>
+<input type="checkbox" name="Vegano" value="sim">Vegano </label>
+<label>
+<input type="checkbox" name="sem glúten" value="sim"> Sem glúten </label>
+<label>
+<input type="checkbox" name="sem lactose" value="sim"> Sem lactose </label>
+</fieldset>
+   <label for="iobservações"> Observações:</p></label>
+<textarea name="observações" id="iobservações" rows="5" cols="179" maxlength="500"
+placeholder="ex:Alergias específicas.."></textarea>
+<p> <label>
+<input type="checkbox" name="Vegetariano" value="sim">Concordo com a política
+  de cancelamento (Até 2h antes do horário reservado)</p> </label>
+<p><button type="submit"> CONFIRMAR RESERVA </button></p>
+</body>
+<footer>Elaine Monique e Bruna Carolina Castro Costa </footer><footer>09/06/2026</footer><footer> Programação WEB</footer>
