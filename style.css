@@ -1,0 +1,239 @@
+/* =====================================================================
+   atv01.css  —  ARQUIVO DE TRABALHO DA ATIVIDADE
+   ---------------------------------------------------------------------
+   Este CSS é funcional, porém deliberadamente básico:
+     - usa apenas seletores de tipo, de classe e de id;
+     - expressa TODAS as medidas em pixels (px);
+     - contém repetição de regras.
+   Sua tarefa é refatorá-lo conforme o enunciado, sem alterar o HTML.
+   ===================================================================== */
+
+   /* rem é baseado no tamanho da fonte do elemento raiz, mantendo consistência em 
+   toda a página. em depende do tamanho da fonte do elemento pai ou do próprio 
+   elemento, escalando de forma proporcional ao contexto. % é relativo ao tamanho 
+   do elemento pai, adaptando-se ao espaço disponível. Com essas características, 
+   rem é ideal para tipografia, em para espaçamentos de texto e % para dimensões de 
+   elementos mais responsivos. */
+
+/* ---------- Base ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background-color: #1565c0;
+  padding: 32px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.subtitulo {
+  color: #bbdefb;
+  font-size: 1rem;
+}
+
+/* ---------- Menu de navegação ---------- */
+.menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 16px 0px 0px 0px;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.menu a {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #ff9999;
+  text-decoration: underline;
+}
+
+.menu a::before {
+  content: "> ";
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 32px;
+  max-width: 60rem;
+}
+
+h2 {
+  color: #1565c0;
+  font-size: 1.5rem;
+}
+
+h2 + p {
+  margin-top: 0.625rem;
+}
+
+
+h3 {
+  color: #0d47a1;
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.destaque {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+.destaque ~ p {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  color: #b71c1c;         
+}
+
+/* ---------- Grade de trilhas ---------- */
+.cartao {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}
+
+.cartao:nth-child(odd) {
+  background-color: #94d4ff;
+  }
+
+.cartao:nth-child(even) {
+  background-color: #ffb1b1;
+}
+
+/* :nth-child() permite selecionar elementos de acordo com sua posição
+   na estrutura do HTML, sendo desnecessário a criação de classes extras para 
+   cada elemento que receberá um estilo diferente. */
+
+.cartao:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.botao {
+  display: inline-block;
+  background-color: red;
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+}
+
+.botao:hover {
+  background-color: #1b34a2;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.cartao .botao {
+  background-color: #1565c0;
+}
+
+/* A regra ".cartao .botao" sobressai ".botao"
+   porque utiliza dois seletores de classe, possuindo
+   maior especificidade na cascata do CSS. Neste caso, 
+   a cor do fundo vai ser o tom de azul de ".cartao .botao"*/
+
+/* ---------- Lista de programação ---------- */
+.lista-dias {
+  font-size: 1rem;
+  line-height: 28px;
+}
+
+.lista-dias > li{
+  font-weight: bold;
+}
+
+/* O seletor descendente (espaço) seleciona qualquer elemento dentro do
+   ancestral, independentemente do nível. Já o seletor de filho direto (>)
+   seleciona apenas os elementos que são filhos imediatos do elemento pai. */
+
+.lista-dias > li:first-child{
+    border-left: 2px solid #1565c0;
+    padding: 10px;
+}
+
+.lista-dias > li:last-child{
+    border-left: 2px solid #1565c0;
+    padding: 10px;
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+  max-width: 480px;
+}
+
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+label::after {
+  content: "*";
+}
+
+input, textarea {
+  display: block;
+  width: 66%;
+  font-size: 1rem;
+  padding: 0.5em;
+  margin-top: 0.25em;
+  border: 1px solid #999999;
+}
+
+input:focus, textarea:focus  {
+  box-shadow: 0 4px 10px rgb(0,0,0,0.4);
+  outline: 2px dashed red;
+}
+
+input[type="email"] {
+  border: 2px solid #1565c0;
+  border-radius: 10px;
+}
+
+input[type="password"] {
+  border: 2px dashed #ffb1b1;
+  border-radius: 10px;
+}
+
+button {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #1565c0;
+  padding: 8px 24px;
+  margin-top: 16px;
+  border: 0px;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: #263238;
+  color: #cfd8dc;
+  padding: 24px;
+  font-size: 0.875rem;
+}
