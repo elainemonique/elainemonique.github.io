@@ -1,66 +1,85 @@
-<html> 
-   <head> 
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body> 
-   <h1>Elaine Monique Araujo da Silva</h1>
-   <h2>921C,desenvolvimento de sistemas</h2>
-   <img src="https://drive.google.com/file/d/1y2sgS8uyZ3SXGfDnJWcYaqB1O9luKkdt/view?usp=drive_link"
-    width="300"
-    height="390" />
-   <h3>14 de agosto de 2009</h3>
-   <p> Eu gosto de assistir filmes e séries,como: ação, comédia, drama, romance, não gosto de terror, então evito. <br/> Eu também costumo ouvir música, amo ouvir gospel, já as seculares eu prefiro internacional e MPB.</br> Não gosto de ficar parada então sempre vou estar procurando algo pra fazer. também valorizo tempo de qualidade, como por exemplo: passar tempo com amigos, ler, praticar algo ou às vezes estudar.. </p>
+<html lang="pt-BR">
 
-<h3> conhecimentos adquiridos no curso </h3>
- 
-   <ul> 
-     <li>conhecimento sobre HTML</li>
-     <li>como programas no vs.code</li>
-     <li>como usar o turtle</li>
-     <li>oque é hardware e sofware, etc...</li>
-   </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Elaine Monique </title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
 
+<body>
+  <div class="pagina">
 
-      <nav aria-label="Atividades do Capítulo 4">
-  <h2>Capítulo 4 — Tabelas, Listas e Mídia</h2>
-  <ul>
-    <li>
-      <a href="cap04/cap04-at01-tabela-basica.html.html">
-        Atividade 1 — Tabela Básica
-      </a>
-    </li>
-    <li>
-      <a href="cap04-at02-tabela-semantica.html">
-        Atividade 2 — Tabela Semântica com Mesclagem
-      </a>
-    </li>
-    <li>
-      <a href="cap04-at03-listas-avancadas.html  cap04-at03-listas-avancadas.html">
-        Atividade 3 — Listas Avançadas e Glossário
-      </a>
-    </li>
-    <li>
-      <a href="...">
-        Atividade 4 — Página Multimídia
-      </a>
-    </li>
-  </ul>
-</nav>
-<section>
-  <h2>Capítulo 5 — Formulários HTML</h2>
-  <nav>
-    <ul>
-      <li><a href="cap05/at01.html">AT01 — Formulário de Contato</a></li>
-      <li><a href="cap05/at02.html">AT02 — Cadastro de Usuário</a></li>
-      <li><a href="cap05/at03.html">AT03 — Matrícula Acadêmica</a></li>
-      <li><a href="cap05/at04.html">AT04 — Inscrição em Evento</a></li>
-      <li><a href="cap05/at05.html">AT05 — Pesquisa Acadêmica</a></li>
-    </ul>
-  </nav>
-</section>
-      <br>
-<a href="pasta/f.html">AT01 CSS </a> 
-      <br>
-      <a href="atividade_css_02/injdex.html">AT02 CSS</a>
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1> Elaine Monique Araujo da Silva </h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p> Me chamo Elaine, normalmente sou uma garota animada 
+           e tento ser dirvertida para os outros, eu estudo 
+           desenvolvimentos de sistemas e estou amando aprender sobre a área, gosto de ouvir música e cantar
+           (ainda estou aprendendo algumas técnicas).</p>
+      </section>
+
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+            <p> estou fazendo projeto de Java </p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 2</h3>
+            <p>Descrição curta do projeto.</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 3</h3>
+            <p>Descrição curta do projeto.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="elaineemonique@gmail.com">elaineemonique@gmail.com</a></li>
+          <li>🐙 <a href="https://github.com/elainemonique">github.com/elainemonique</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 Elaine Monique · feito com HTML + CSS Grid</footer>
+
+  </div>
 </body>
-</html> 
+
+</html>
